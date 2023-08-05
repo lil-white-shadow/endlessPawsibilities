@@ -1,0 +1,43 @@
+.breedContainer {
+  padding: 10px;
+}
+
+.breedContainer, .subbreedWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.breedContainer div {
+  display: inherit;
+  flex: 1 1 auto;
+}
+
+.breed, .subbreed {
+  box-sizing: border-box;
+  flex-grow: 1;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  background-color: coral;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+.breed:hover, .subbreed:hover {
+  transform: scale(1.05);
+}
+
+.breed:active, .subbreed:active {
+  transform: scale(0.95);
+}
+
+.subbreed {
+ background-color: cornflowerblue; 
+}

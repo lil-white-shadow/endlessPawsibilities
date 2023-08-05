@@ -1,0 +1,7 @@
+.gameplay {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  background: linear-gradient(cornflowerblue, white);
+  min-height: 100vh;
+}

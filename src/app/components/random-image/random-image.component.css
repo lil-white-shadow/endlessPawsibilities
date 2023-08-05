@@ -1,0 +1,13 @@
+.image {
+  background-color: black;
+  margin: 0 auto;
+  width: 50vw;
+  height: fit-content;
+  max-height: 40vh;
+  aspect-ratio: 3/4;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 50px;
+  border: 1px solid;
+}

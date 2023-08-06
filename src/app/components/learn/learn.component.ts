@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearnComponent implements OnInit {
 
-  learnInstruction: string = "Click on a breed name to see an image of a random dog of that breed.";
+  learnInstruction: string = "Click on a breed name or the button below to get started.";
 
   constructor() { }
 

@@ -10,6 +10,7 @@ import { LearnComponent } from './components/learn/learn.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { PlayComponent } from './components/play/play.component';
+import { BreedsInPlayComponent } from './components/breedsInPlay/breedsInPlay.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { PlayComponent } from './components/play/play.component';
     LearnComponent,
     HomeComponent,
     AboutComponent,
-    PlayComponent
+    PlayComponent,
+    BreedsInPlayComponent
   ],
   imports: [
     BrowserModule,

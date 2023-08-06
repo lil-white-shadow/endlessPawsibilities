@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayComponent implements OnInit {
 
+  playInstruction: string = "An image of a dog will be displayed. Identify its' breed correctly.";
+  continueButton: string = "Continue";
+
   constructor() { }
 
   ngOnInit() {

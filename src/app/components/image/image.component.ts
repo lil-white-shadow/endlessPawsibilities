@@ -9,6 +9,7 @@ import { ImageService } from 'src/app/services/image.service';
 export class ImageComponent implements OnInit {
 
   @Input() instruction: string = "";
+  @Input() continueButton: string = "";
 
   apiResponse: any;
   imageUrl!: string;

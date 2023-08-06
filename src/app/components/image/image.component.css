@@ -1,13 +1,24 @@
-.image {
-  background-color: black;
+.screen {
+  background-color: #111111;
   margin: 0 auto;
-  width: 50vw;
+  width: 45vw;
   height: fit-content;
   max-height: 40vh;
   aspect-ratio: 3/4;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  border-radius: 50px;
+  border-radius: 5vh;
   border: 1px solid;
+}
+
+.screenVerticalBar {
+  display: flex;
+  width: 8px;
+  border-radius: 4px;
+  height: 50%;
+  margin-left: 97%;
+  background-color: #FFFFFF;
+  position: relative;
+  top: 25%;
 }

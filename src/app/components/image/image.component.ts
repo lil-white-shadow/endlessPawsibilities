@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
@@ -7,6 +7,8 @@ import { ImageService } from 'src/app/services/image.service';
   styleUrls: ['./image.component.css']
 })
 export class ImageComponent implements OnInit {
+
+  @Input() instruction: string = "";
 
   apiResponse: any;
   imageUrl!: string;

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, Subject } from 'rxjs';
 import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
 @Injectable({
@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 })
 export class UserFeedbackService {
 
-  feedback = new BehaviorSubject<boolean>(false);
+  feedback = new Subject<boolean>;
 
   constructor() { }
 

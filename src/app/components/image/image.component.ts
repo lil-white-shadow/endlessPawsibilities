@@ -19,16 +19,19 @@ export class ImageComponent implements OnInit {
   imageBreed!: string;
 
   userFeedback!: boolean;
+  userFeedbackSubmitted: boolean = false;
 
   constructor(private imageService: ImageService, private breedsService: BreedsService, private userFeedbackService: UserFeedbackService) { }
 
   ngOnInit() {
     this.getImage();
     this.getUserFeedback();
+    console.log(this.userFeedback);
   }
   
   getRandomImage() {
     this.userFeedback = false;
+    this.userFeedbackSubmitted = false;
     this.apiResponse = this.imageService.getRandomImage().subscribe(
       response => {
         this.apiResponse = response;
@@ -66,6 +69,7 @@ export class ImageComponent implements OnInit {
     this.userFeedbackService.getUserFeedback().subscribe(
       response => {
         this.userFeedback = response;
+        this.userFeedbackSubmitted = true;
       }
     );
   }

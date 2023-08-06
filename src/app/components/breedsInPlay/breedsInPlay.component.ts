@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BreedsService } from 'src/app/services/breeds.service';
 import { ImageService } from 'src/app/services/image.service';
+import { UserFeedbackService } from 'src/app/services/userFeedback.service';
 
 @Component({
   selector: 'app-breedsInPlay',
@@ -19,7 +20,7 @@ export class BreedsInPlayComponent implements OnInit {
 
   isSolved: boolean = false;
 
-  constructor(private breedsService: BreedsService, private imageService: ImageService) { }
+  constructor(private breedsService: BreedsService, private imageService: ImageService, private userFeedbackService: UserFeedbackService) { }
 
   ngOnInit() {
     this.getBreeds();
@@ -39,9 +40,11 @@ export class BreedsInPlayComponent implements OnInit {
       this.getAnswer();
       if(this.breedAnswer === breed) {
         console.log('correct');
+        this.userFeedbackService.setUserFeedback(true);
         this.isSolved = true;
       } else {
         console.log('incorrect');
+        this.userFeedbackService.setUserFeedback(false);
       }
     } else {
       console.log('solved already');

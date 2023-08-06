@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { BreedsService } from 'src/app/services/breeds.service';
 import { ImageService } from 'src/app/services/image.service';
+import { UserFeedbackService } from 'src/app/services/userFeedback.service';
 
 @Component({
   selector: 'app-image',
@@ -18,10 +19,13 @@ export class ImageComponent implements OnInit {
   imageUrl!: string;
   randomImageBreed!: string;
 
-  constructor(private imageService: ImageService, private breedsService: BreedsService) { }
+  userFeedback!: boolean;
+
+  constructor(private imageService: ImageService, private breedsService: BreedsService, private userFeedbackService: UserFeedbackService) { }
 
   ngOnInit() {
     this.getImage();
+    this.getUserFeedback();
   }
   
   getRandomImage() {
@@ -37,6 +41,7 @@ export class ImageComponent implements OnInit {
           let randomImageBreedArr = randomImageBreedRaw.split('-');
           this.randomImageBreed = randomImageBreedArr.reverse().join(' ');
         }
+        console.log("correct answer: " + this.randomImageBreed);
         this.breedsService.setAnswer(this.randomImageBreed);
       }
     );
@@ -46,6 +51,14 @@ export class ImageComponent implements OnInit {
     this.imageService.getImage().subscribe(
       response => {
         this.imageUrl = response;
+      }
+    );
+  }
+
+  getUserFeedback() {
+    this.userFeedbackService.getUserFeedback().subscribe(
+      response => {
+        this.userFeedback = response;
       }
     );
   }

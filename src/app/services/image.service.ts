@@ -28,7 +28,6 @@ export class ImageService {
   }
 
   getImage(): Observable<any> {
-    console.log(this.getImageByBreed);
     return this.imageByBreed.asObservable();
   }
 

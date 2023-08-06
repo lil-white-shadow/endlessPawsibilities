@@ -14,7 +14,6 @@ export class ImageComponent implements OnInit {
   constructor(private imageService: ImageService) { }
 
   ngOnInit() {
-    this.getRandomImage();
     this.getImage();
   }
   
@@ -31,7 +30,6 @@ export class ImageComponent implements OnInit {
   getImage() {
     this.imageService.getImage().subscribe(
       response => {
-        console.log(response);
         this.imageUrl = response;
       }
     );

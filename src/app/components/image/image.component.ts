@@ -12,6 +12,8 @@ export class ImageComponent implements OnInit {
   @Input() instruction: string = "";
   @Input() continueButton: string = "";
 
+  isPlay: boolean = false;
+
   apiResponse: any;
   imageUrl!: string;
   randomImageBreed!: string;
@@ -23,6 +25,7 @@ export class ImageComponent implements OnInit {
   }
   
   getRandomImage() {
+    this.isPlay = true;
     this.apiResponse = this.imageService.getRandomImage().subscribe(
       response => {
         this.apiResponse = response;

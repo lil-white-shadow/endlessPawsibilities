@@ -66,14 +66,21 @@
   font-size: 1.5rem;
 }
 
-.continueButton {
+.continueButton, .nextButton {
   font-size: 1.5rem;
   border: none;
   border-radius: 30px;
   padding: 10px 30px;
+  cursor: pointer;
 }
 
-.continueButton:active {
+.nextButton {
+  width: 60%;
+  margin-top: 35.5vh;
+  margin-left: 20%;
+}
+
+.continueButton:active, .nextButton {
   transform: scale(0.97);
 }
 

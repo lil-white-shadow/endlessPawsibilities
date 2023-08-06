@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BreedsComponent } from './components/breeds/breeds.component';
 import { HttpClientModule } from '@angular/common/http';
-import { RandomImageComponent } from './components/random-image/random-image.component';
+import { ImageComponent } from './components/image/image.component';
 import { GameplayComponent } from './components/gameplay/gameplay.component';
 import { HomeComponent } from './components/home/home.component';
 
@@ -13,7 +13,7 @@ import { HomeComponent } from './components/home/home.component';
   declarations: [
     AppComponent,
     BreedsComponent,
-    RandomImageComponent,
+    ImageComponent,
     GameplayComponent,
     HomeComponent
   ],

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Breed, Subbreed } from 'src/app/models/breed';
 import { BreedsService } from 'src/app/services/breeds.service';
+import { ImageService } from 'src/app/services/image.service';
 
 @Component({
   selector: 'app-breeds',
@@ -9,21 +10,33 @@ import { BreedsService } from 'src/app/services/breeds.service';
 })
 export class BreedsComponent implements OnInit {
 
-  apiResponse: any;
+  breedResponse: any;
   breedArr: [string, [unknown]][] | undefined;
+  
+  imageResponse: any;
+  imageUrl!: string;
 
-  constructor(private breedsService: BreedsService) { }
+  constructor(private breedsService: BreedsService, private imageService: ImageService) { }
 
   ngOnInit() {
     this.getBreeds();
   }
   
   getBreeds() {
-    this.apiResponse = this.breedsService.getBreeds().subscribe(
+    this.breedResponse = this.breedsService.getBreeds().subscribe(
       (response: any) => {
-        this.apiResponse = response;
-        this.apiResponse.status === "success" ? this.breedArr = Object.entries(this.apiResponse.message)  : null;
-        console.log(this.breedArr);
+        this.breedResponse = response;
+        this.breedResponse.status === "success" ? this.breedArr = Object.entries(this.breedResponse.message)  : null;
+      }
+    );
+  }
+
+  getImageByBreed(breed:string) {
+    this.imageResponse = this.imageService.getImageByBreed(breed).subscribe(
+      (response: any) => {
+        this.imageResponse = response;
+        this.imageResponse.status === "success" ? this.imageUrl = this.imageResponse.message : null;
+        this.imageService.setImage(this.imageUrl);
       }
     );
   }

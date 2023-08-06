@@ -1,0 +1,7 @@
+.learn {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  min-height: 100vh;
+}

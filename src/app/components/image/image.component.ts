@@ -13,6 +13,7 @@ export class ImageComponent implements OnInit {
 
   apiResponse: any;
   imageUrl!: string;
+  randomImageBreed!: string;
 
   constructor(private imageService: ImageService) { }
 
@@ -25,7 +26,13 @@ export class ImageComponent implements OnInit {
       response => {
         this.apiResponse = response;
         this.apiResponse.status === "success" ? this.imageUrl = this.apiResponse.message : null;
-        console.log(this.imageUrl);
+        let randomImageBreedRaw = this.imageUrl.slice(this.imageUrl.indexOf('breeds/') + 7, this.imageUrl.lastIndexOf('/'));
+        if(randomImageBreedRaw.indexOf('-') < 1) {
+          this.randomImageBreed = randomImageBreedRaw;
+        } else {
+          let randomImageBreedArr = randomImageBreedRaw.split('-');
+          this.randomImageBreed = randomImageBreedArr.reverse().join(' ');
+        }
       }
     );
   }

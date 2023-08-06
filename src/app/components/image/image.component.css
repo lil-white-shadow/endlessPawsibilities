@@ -76,3 +76,10 @@
 .continueButton:active {
   transform: scale(0.97);
 }
+
+.answer {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: black;
+}

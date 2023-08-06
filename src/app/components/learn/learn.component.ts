@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LearnComponent implements OnInit {
 
-  learnInstruction: string = "Click on a breed name or the button below to get started.";
+  learnInstruction: string = "Click on a breed or click the random button to get started.";
 
   constructor() { }
 

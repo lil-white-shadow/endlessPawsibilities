@@ -101,6 +101,18 @@
   margin-top: 15vh;
 }
 
+.feedbackNegative {
+  color: red;
+  text-shadow: 5px 5px black;
+  font-size: 5rem;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin-top: 15vh;
+  animation: hideAnimation 0s ease-in 0.5s;
+  animation-fill-mode: forwards;
+}
+
 .breed {
   color: lightgreen;
   text-shadow: 3px 3px black;

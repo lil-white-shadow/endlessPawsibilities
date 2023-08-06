@@ -18,7 +18,7 @@
     </div>
     <div *ngIf="!this.isPlay" class="breed">{{this.imageBreed}}</div>
     <div *ngIf="this.isPlay && this.userFeedback" class="feedback">That is correct!</div>
-    <div *ngIf="this.isPlay && !this.userFeedback && this.userFeedbackSubmitted" class="feedback">Try again</div>
+    <div *ngIf="this.isPlay && !this.userFeedback && this.userFeedbackSubmitted" class="feedbackNegative">Try again</div>
 
   </div>
   <button *ngIf="this.isPlay && this.userFeedback" class="nextButton" (click)="this.getRandomImage()">Next</button>

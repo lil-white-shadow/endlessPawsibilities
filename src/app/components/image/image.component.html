@@ -17,6 +17,7 @@
       <button *ngIf="this.continueButton !== ''" class="continueButton" (click)="this.getRandomImage()">{{this.continueButton}}</button>
     </div>
     <div *ngIf="this.isPlay && this.userFeedback" class="feedback">That is correct!</div>
-    <button *ngIf="this.isPlay" class="nextButton" (click)="this.getRandomImage()">Next</button>
+    <button *ngIf="this.isPlay && this.userFeedback" class="nextButton" (click)="this.getRandomImage()">Next</button>
+    <button *ngIf="this.isPlay && !this.userFeedback" class="nextButton" (click)="this.getRandomImage()">Skip</button>
   </div>
 </div>

@@ -29,6 +29,7 @@ export class ImageComponent implements OnInit {
   }
   
   getRandomImage() {
+    this.userFeedback = false;
     this.isPlay = true;
     this.apiResponse = this.imageService.getRandomImage().subscribe(
       response => {

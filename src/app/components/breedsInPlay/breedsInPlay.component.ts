@@ -36,18 +36,14 @@ export class BreedsInPlayComponent implements OnInit {
   }
 
   checkBreed(breed:string) {
-    if(!this.isSolved) {
-      this.getAnswer();
-      if(this.breedAnswer === breed) {
-        console.log('correct');
-        this.userFeedbackService.setUserFeedback(true);
-        this.isSolved = true;
-      } else {
-        console.log('incorrect');
-        this.userFeedbackService.setUserFeedback(false);
-      }
+    this.getAnswer();
+    if(this.breedAnswer === breed) {
+      console.log('correct');
+      this.userFeedbackService.setUserFeedback(true);
+      this.isSolved = true;
     } else {
-      console.log('solved already');
+      console.log('incorrect');
+      this.userFeedbackService.setUserFeedback(false);
     }
   }
 

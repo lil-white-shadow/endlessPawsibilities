@@ -2,6 +2,7 @@
 
 This is a fun little game created with Angular v16 and [dog-api](https://dog.ceo/dog-api/). The objective is to identify a dogs breed based on a single image of a dog. There is also a learning section where users can view images of dogs by breed or see an image of a random dog along with its breed information.
 
+## Deployed using github pages at: [https://lil-white-shadow.github.io/endlessPawsibilities/](https://lil-white-shadow.github.io/endlessPawsibilities/)
 
 ## Images and Snippets
 ### Home

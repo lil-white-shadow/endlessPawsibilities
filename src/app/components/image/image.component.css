@@ -1,3 +1,7 @@
+.screenWrapper {
+  background-size: cover;
+}
+
 .screen {
   background-color: #111111;
   margin: 0 auto;

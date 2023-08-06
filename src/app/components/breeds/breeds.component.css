@@ -24,9 +24,9 @@
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
-  background-color: coral;
+  background: linear-gradient(90deg, #ff000050, #0000ff50);
   font-size: 1.2rem;
-  color: #FFFFFF;
+  color: black;
   cursor: pointer;
 }
 
@@ -39,5 +39,5 @@
 }
 
 .subbreed {
- background-color: cornflowerblue; 
+  background: linear-gradient(90deg, #0000ff50, #ff000050);
 }

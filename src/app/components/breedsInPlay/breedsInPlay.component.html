@@ -1,11 +1,11 @@
 <div class="breedContainer">
   <div *ngFor="let breed of breedArr">
-    <div class="breed" *ngIf="breed[1].length < 1" (click)="getImageByBreed(breed[0])">
+    <div class="breed" *ngIf="breed[1].length < 1" (click)="checkBreed(breed[0])">
       {{breed[0] | titlecase }}
     </div>
     <div class="subbreedWrapper" *ngIf="breed[1].length > 0">
       <div *ngFor="let subbreed of breed[1]">
-        <div class="subbreed" (click)="getImageByBreed(breed[0] + '/' + subbreed)">
+        <div class="subbreed" (click)="checkBreed(subbreed + ' ' + breed[0])">
           {{subbreed}} {{breed[0] | titlecase}}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { BreedsService } from 'src/app/services/breeds.service';
 import { ImageService } from 'src/app/services/image.service';
 
 @Component({
@@ -15,7 +16,7 @@ export class ImageComponent implements OnInit {
   imageUrl!: string;
   randomImageBreed!: string;
 
-  constructor(private imageService: ImageService) { }
+  constructor(private imageService: ImageService, private breedsService: BreedsService) { }
 
   ngOnInit() {
     this.getImage();
@@ -33,6 +34,7 @@ export class ImageComponent implements OnInit {
           let randomImageBreedArr = randomImageBreedRaw.split('-');
           this.randomImageBreed = randomImageBreedArr.reverse().join(' ');
         }
+        this.breedsService.setAnswer(this.randomImageBreed);
       }
     );
   }

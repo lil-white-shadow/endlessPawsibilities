@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { BreedsService } from 'src/app/services/breeds.service';
 import { ImageService } from 'src/app/services/image.service';
 
@@ -15,6 +15,8 @@ export class BreedsInPlayComponent implements OnInit {
   imageResponse: any;
   imageUrl!: string;
 
+  breedAnswer!: string;
+
   constructor(private breedsService: BreedsService, private imageService: ImageService) { }
 
   ngOnInit() {
@@ -30,12 +32,19 @@ export class BreedsInPlayComponent implements OnInit {
     );
   }
 
-  getImageByBreed(breed:string) {
-    this.imageResponse = this.imageService.getImageByBreed(breed).subscribe(
-      (response: any) => {
-        this.imageResponse = response;
-        this.imageResponse.status === "success" ? this.imageUrl = this.imageResponse.message : null;
-        this.imageService.setImage(this.imageUrl);
+  checkBreed(breed:string) {
+    this.getAnswer();
+    if(this.breedAnswer === breed) {
+      console.log('correct');
+    } else {
+      console.log('incorrect');
+    }
+  }
+
+  getAnswer() {
+    this.breedsService.getAnswer().subscribe(
+      response => {
+        this.breedAnswer = response;
       }
     );
   }

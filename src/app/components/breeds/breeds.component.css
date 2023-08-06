@@ -19,14 +19,14 @@
   flex-grow: 1;
   gap: 10px;
   padding: 10px;
-  border-radius: 15px;
+  border-radius: 5px;
   height: 100%;
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
-  background: linear-gradient(90deg, #ff000050, #0000ff50);
+  background-color: #333333;
   font-size: 1.2rem;
-  color: black;
+  color: white;
   cursor: pointer;
 }
 
@@ -36,8 +36,4 @@
 
 .breed:active, .subbreed:active {
   transform: scale(0.95);
-}
-
-.subbreed {
-  background: linear-gradient(90deg, #0000ff50, #ff000050);
 }

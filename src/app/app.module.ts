@@ -6,16 +6,18 @@ import { AppComponent } from './app.component';
 import { BreedsComponent } from './components/breeds/breeds.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ImageComponent } from './components/image/image.component';
-import { GameplayComponent } from './components/gameplay/gameplay.component';
+import { LearnComponent } from './components/learn/learn.component';
 import { HomeComponent } from './components/home/home.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     BreedsComponent,
     ImageComponent,
-    GameplayComponent,
-    HomeComponent
+    LearnComponent,
+    HomeComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

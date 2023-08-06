@@ -18,8 +18,6 @@ export class BreedsInPlayComponent implements OnInit {
 
   breedAnswer!: string;
 
-  isSolved: boolean = false;
-
   constructor(private breedsService: BreedsService, private imageService: ImageService, private userFeedbackService: UserFeedbackService) { }
 
   ngOnInit() {
@@ -40,7 +38,6 @@ export class BreedsInPlayComponent implements OnInit {
     if(this.breedAnswer === breed) {
       console.log('correct');
       this.userFeedbackService.setUserFeedback(true);
-      this.isSolved = true;
     } else {
       console.log('incorrect');
       this.userFeedbackService.setUserFeedback(false);

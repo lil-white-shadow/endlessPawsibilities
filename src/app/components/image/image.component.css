@@ -18,11 +18,41 @@
 
 .screenVerticalBar {
   display: flex;
-  width: 8px;
+  width: 30%;
   border-radius: 4px;
-  height: 50%;
-  margin-left: 97%;
+  height: 8px;
+  margin-left: 35%;
   background-color: #FFFFFF;
   position: relative;
-  top: 25%;
+  top: 85%;
+}
+
+.screenNav {
+  box-sizing: border-box;
+  color: #007AFF;
+  display: flex;
+  width: 65px;
+  border-radius: 5vh 5vh 0 0;
+  height: 40px;
+  background: #222222;
+  width: 100%;
+  opacity: 95%;
+  background-blend-mode: exclusion;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 80px;
+  font-size: 1.25rem;
+}
+
+.navLink {
+  cursor: pointer;
+}
+
+.navLink__home {
+  font-size: 1.5rem;
+}
+
+.secondaryLinks {
+  display: flex;
+  gap: 2rem;
 }

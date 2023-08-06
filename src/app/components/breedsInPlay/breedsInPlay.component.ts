@@ -18,10 +18,13 @@ export class BreedsInPlayComponent implements OnInit {
 
   breedAnswer!: string;
 
+  clickedBreed!: string;
+
   constructor(private breedsService: BreedsService, private imageService: ImageService, private userFeedbackService: UserFeedbackService) { }
 
   ngOnInit() {
     this.getBreeds();
+    this.getAnswer();
   }
   
   getBreeds() {
@@ -34,7 +37,7 @@ export class BreedsInPlayComponent implements OnInit {
   }
 
   checkBreed(breed:string) {
-    this.getAnswer();
+    this.clickedBreed = breed;
     if(this.breedAnswer === breed) {
       console.log('correct');
       this.userFeedbackService.setUserFeedback(true);

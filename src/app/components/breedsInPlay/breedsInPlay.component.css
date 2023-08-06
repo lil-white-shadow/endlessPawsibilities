@@ -38,3 +38,8 @@
 .breed:active, .subbreed:active {
   transform: scale(0.95);
 }
+
+.clicked {
+  background-color: blue;
+  color: black;
+}

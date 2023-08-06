@@ -20,6 +20,6 @@
     <div *ngIf="this.isPlay && this.userFeedback" class="feedback">That is correct!</div>
   </div>
   <button *ngIf="this.isPlay && this.userFeedback" class="nextButton" (click)="this.getRandomImage()">Next</button>
-  <button *ngIf="this.isPlay && !this.userFeedback" class="nextButton" (click)="this.getRandomImage()">Skip</button>
+  <button *ngIf="this.isPlay && !this.userFeedback && imageUrl !== ''" class="nextButton" (click)="this.getRandomImage()">Skip</button>
   <button *ngIf="!this.isPlay" class="nextButton" (click)="this.getRandomImage()">Random</button>
 </div>

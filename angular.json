@@ -14,7 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "docs",
-            "baseHref": "https://lil-white-shadow.github.io/endlessPawsibilities/",
+            "baseHref": "",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [

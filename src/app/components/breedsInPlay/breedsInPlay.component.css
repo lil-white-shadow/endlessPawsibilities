@@ -54,3 +54,9 @@
     height: calc(50vh - 30px);
   }
 }
+
+@media (hover: hover) { 
+  .breedContainer::-webkit-scrollbar{
+    display: none;
+  }
+}

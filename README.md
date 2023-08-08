@@ -14,3 +14,15 @@ This is a fun little game created with Angular v16 and [dog-api](https://dog.ceo
 ### Learn
 ![image](https://github.com/lil-white-shadow/endlessPawsibilities/assets/96262157/1eeaa998-786a-4fcb-ae8f-7f31f035b6bb)
 
+### Home - Mobile View
+![image](https://github.com/lil-white-shadow/endlessPawsibilities/assets/96262157/62a2ac19-87b0-48e5-9512-65276e6c98cd)
+
+### About - Mobile View
+![image](https://github.com/lil-white-shadow/endlessPawsibilities/assets/96262157/226f223e-2859-4b90-b0b7-e53ef8114314)
+
+### Play - Mobile View
+![image](https://github.com/lil-white-shadow/endlessPawsibilities/assets/96262157/e11343b9-4da1-4664-8fe6-f6ed5bada827)
+
+### Learn - Mobile View
+![image](https://github.com/lil-white-shadow/endlessPawsibilities/assets/96262157/96a77cfe-b1f7-4cbf-857b-328288390276)
+

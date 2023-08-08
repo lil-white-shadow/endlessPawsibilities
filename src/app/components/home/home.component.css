@@ -11,10 +11,6 @@
 .screen {
   background: linear-gradient(90deg, #111111 0 12%, red 12%, blue 88%, #111111 88% 100%);
   margin: 0 auto;
-  width: 45vw;
-  height: fit-content;
-  max-height: 40vh;
-  aspect-ratio: 3/4;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -43,6 +39,7 @@
 
 .homeNav > a {
   color: black;
+  padding: 10px;
 }
 
 .homeNav > a:hover {
@@ -51,4 +48,28 @@
 
 .homeNav > a:active {
   transform: scale(0.95);
+}
+
+@media (max-width:900px) {
+
+  .screen {
+    background: linear-gradient(90deg, red, blue);
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: calc(100vh - 20px);
+    width: calc(100vw - 20px);
+  }
+
+  .logo {
+    font-size: 3rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .homeNav {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  
 }

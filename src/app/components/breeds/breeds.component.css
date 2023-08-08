@@ -1,6 +1,6 @@
 .breedContainer {
   padding: 10px;
-  margin-top: 50px;
+  margin-top: 80px;
 }
 
 .breedContainer, .subbreedWrapper {
@@ -37,4 +37,11 @@
 
 .breed:active, .subbreed:active {
   transform: scale(0.95);
+}
+
+@media (max-width:900px) {
+
+  .breedContainer {
+    margin-top: 10px;
+  }
 }
